@@ -21,6 +21,7 @@
       crossorigin="anonymous"
     />
     <link href="user.css" rel="stylesheet" />
+    <script src="main.js"></script>
   </head>
   <body>
     <header>
@@ -29,15 +30,26 @@
 
     <div class="container">
       <div class="main card">
+        <div class="search-bar">
+          <form>
+            <input
+              type="text"
+              placeholder="Buscar un curso y seccion..."
+              name="search"
+            />
+            <button type="submit"><i class="fa fa-search lupabtn"></i></button>
+          </form>
+        </div>
+
         <table>
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Curso</th>
               <th scope="col">Seccion</th>
-              <th scope="col">Credito</th>
+              <th scope="col">Creditos</th>
               <th scope="col">Capacidad</th>
-              <th scope="col">Elegir</th>
+              <th scope="col">Añadir</th>
             </tr>
           </thead>
           <tbody>
@@ -70,13 +82,63 @@
       </div>
 
       <div class="info">
-        <h5>nombre apellido apellido</h5>
+        <div class="pm">
+          <h5>nombre apellido apellido</h5>
+          <hr />
 
-        <h5>pre-matricula</h5>
+          <h5>Pre-matricula</h5>
 
-        <p><button>-</button> CCOM3001, M25</p>
-        <p><button>-</button> CCOM3001, M25</p>
-        <p><button>-</button> CCOM3001, M25</p>
+          <table>
+            <thead>
+              <th>Eliminar</th>
+              <th>Curso - Seccion</th>
+              <th>Creditos</th>
+              <th>Estado</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button>-</button></td>
+                <td>CCOM3001 - M25</td>
+                <td>3</td>
+                <td>Pendiente</td>
+              </tr>
+              <tr>
+                <td><button>-</button></td>
+                <td>CCOM3001 - M25</td>
+                <td>3</td>
+                <td>cancelado por cupo</td>
+              </tr>
+              <tr>
+                <td><button>-</button></td>
+                <td>CCOM3001 - M25</td>
+                <td>3</td>
+                <td>Pendiente</td>
+              </tr>
+              <tr>
+                <td colspan="2">Total de creditos:</td>
+                <td colspan="2">9</td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="pmbtn" onclick="showPopup()">Matricular Cursos</button>
+        </div>
+
+        <div class="popup-container" id="popup">
+          <div class="popup-content">
+            <h4>Verfique su <br />pre-matricula</h4>
+            <hr />
+            <ol>
+              <li>CCOM3001 - M25</li>
+              <li>CCOM3001 - M25</li>
+              <li>CCOM3001 - M25</li>
+              <li>CCOM3001 - M25</li>
+              <li>CCOM3001 - M25</li>
+            </ol>
+            <p>Total de creditos: 15</p>
+            <button class="pmbtn" onclick="goBack()">Atras</button>
+            <button class="pmbtn" onclick="goBack()">Confirmar</button>
+          </div>
+        </div>
       </div>
     </div>
   </body>

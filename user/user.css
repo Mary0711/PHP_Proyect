@@ -47,13 +47,23 @@
 
   .main {
     flex: 60%;
+    text-align: center;
   }
   .info {
-    flex: 40%;
-    border: 4px dashed rgba(255, 255, 255, 0.1);
+    flex: 45%;
     text-align: center;
-    margin: 20px;
-    padding: 10px;
+  }
+
+  @media (max-width: 968px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main,
+    .info {
+      flex: 100%;
+    }
   }
   * {
     font-family: "Poppins", sans-serif;
@@ -104,5 +114,81 @@
 
   h5 {
     margin: 10px;
+  }
+
+  .search-bar input {
+    border-radius: 30px;
+    background-color: rgba(240, 248, 255, 0.755);
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    padding-left: 17px;
+    width: 50%;
+    color: #080710;
+    font-size: 13px;
+  }
+
+  .search-bar button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .pm {
+    border: 4px dashed rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .pm thead {
+    background-color: rgba(255, 255, 255, 0.13);
+  }
+
+  .pmbtn {
+    margin-top: 15px;
+    width: 35%;
+    background-color: #ffffffcc;
+    color: #080710;
+    padding: 12px 0;
+    font-size: 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-content {
+    height: 400px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 55px;
+  }
+
+  ol {
+    margin: 20px;
+    font-size: 14px;
   }
 }
