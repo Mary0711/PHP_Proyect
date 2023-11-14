@@ -20,7 +20,9 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link href="user.css" rel="stylesheet" />
+    <link href="admin.css" rel="stylesheet" />
+    <script src="/user/main.js"></script>
+
   </head>
   <body>
     <header>
@@ -44,7 +46,8 @@
               <th scope="col">Seccion</th>
               <th scope="col">Credito</th>
               <th scope="col">Capacidad</th>
-              <th scope="col">Añadir</th>
+              <th scope="col">Eliminar</th>
+              <th scope="col">Editar</th>
             </tr>
           </thead>
           <tbody>
@@ -54,7 +57,8 @@
               <td>M25</td>
               <td>3</td>
               <td>20/20</td>
-              <td><button>+</button></td>
+              <td><button>e</button></td>
+              <td><button>e</button></td>
             </tr>
             <tr>
               <th scope="row">2</th>
@@ -62,7 +66,8 @@
               <td>M25</td>
               <td>3</td>
               <td>20/20</td>
-              <td><button>+</button></td>
+              <td><button>e</button></td>
+              <td><button>e</button></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -70,43 +75,84 @@
               <td>M25</td>
               <td>3</td>
               <td>20/20</td>
-              <td><button>+</button></td>
+              <td><button>e</button></td>
+              <td><button>e</button></td>
             </tr>
           </tbody>
         </table>
+
+        <button class="pmbtn" onclick="showPopup()">+ Anadir nuevo curso</button>
+        <div class="popup-container" id="popup">
+          <div class="popup-content">
+            <h4>pre-matricula de <br /> nombre apellido apellido</h4>
+            <hr />
+            <ol>
+              <li>CCOM3001 - M25</li>
+              <li>CCOM3001 - M25</li>
+              <li>CCOM3001 - M25</li>
+              <li>CCOM3001 - M25</li>
+              <li>CCOM3001 - M25</li>
+            </ol>
+            <p>Total de creditos: 15</p>
+            <button class="pmbtn" onclick="goBack()">Atras</button>
+            <button class="pmbtn" onclick="goBack()">Confirmar</button>
+          </div>
+        </div>
+
       </div>
 
       <div class="info">
         <div class="pm">
-          <h5>nombre apellido apellido</h5>
+          <h5>Buscar estudiantes</h5>
+          <div class="search-bar">
+            <form>
+              <input type="text" placeholder="Buscar..." name="search" />
+              <button type="submit"><i class="fa fa-search lupabtn"></i></button>
+            </form>
 
-          <h5>Pre-matricula</h5>
 
           <table>
             <thead>
-              <th>Eliminar</th>
-              <th>Curso - Seccion</th>
-              <th>Estado</th>
+              <th>Apellido, Nombre</th>
+              <th># de estudiante</th>
+              <th>Ver</th>
             </thead>
             <tbody>
               <tr>
-                <td><button>-</button></td>
-                <td>CCOM3001 - M25</td>
-                <td>Pendiente</td>
+                <td>Pepito, Pelon</td>
+                <td>840-19-8616</td>
+                <td><button class="pmbtn" onclick="showPopup()">/</button></td>
+
               </tr>
               <tr>
-                <td><button>-</button></td>
-                <td>CCOM3001 - M25</td>
-                <td>cancelado por cupo</td>
+                <td>Pepito, Pelon</td>
+                <td>840-19-8616</td>
+                <td><button class="pmbtn" onclick="showPopup()">/</button></td>
               </tr>
               <tr>
-                <td><button>-</button></td>
-                <td>CCOM3001 - M25</td>
-                <td>Pendiente</td>
+                <td>Pepito, Pelon</td>
+                <td>840-19-8616</td>
+                <td><button class="pmbtn" onclick="showPopup()">/</button></td>
               </tr>
             </tbody>
           </table>
-          <button class="pmbtn">Matricular Cursos</button>
+        </div>
+      </div>
+
+      <div class="popup-container" id="popup">
+        <div class="popup-content">
+          <h4>pre-matricula de <br /> nombre apellido apellido</h4>
+          <hr />
+          <ol>
+            <li>CCOM3001 - M25</li>
+            <li>CCOM3001 - M25</li>
+            <li>CCOM3001 - M25</li>
+            <li>CCOM3001 - M25</li>
+            <li>CCOM3001 - M25</li>
+          </ol>
+          <p>Total de creditos: 15</p>
+          <button class="pmbtn" onclick="goBack()">Atras</button>
+          <button class="pmbtn" onclick="goBack()">Confirmar</button>
         </div>
       </div>
     </div>
