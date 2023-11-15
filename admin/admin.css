@@ -116,7 +116,7 @@
     margin: 10px;
   }
 
-  .search-bar input {
+   .search-bar input {
     border-radius: 30px;
     background-color: rgba(240, 248, 255, 0.755);
     margin: 10px;
@@ -128,7 +128,7 @@
     font-size: 13px;
   }
 
-  .search-bar button {
+   .search-bar button {
     width: 36px;
     height: 36px;
     border-radius: 50px;
@@ -186,7 +186,7 @@
   }
 
   .popup-content {
-    height: 400px;
+    height: 550px;
     width: 400px;
     background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
@@ -204,4 +204,32 @@
     margin: 20px;
     font-size: 14px;
   }
+
+  .popup-content form * {
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+  }
+  
+
+  .popup-content label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .popup-content input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
 }

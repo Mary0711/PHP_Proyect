@@ -26,7 +26,7 @@
   </head>
   <body>
     <header>
-      <h2>Administracio de cursos de UPRA</h2>
+      <h2>Administracion de cursos de UPRA</h2>
     </header>
 
     <div class="container">
@@ -81,21 +81,25 @@
           </tbody>
         </table>
 
-        <button class="pmbtn" onclick="showPopup()">+ Anadir nuevo curso</button>
-        <div class="popup-container" id="popup">
+        <button class="pmbtn" onclick="showPopupCurso()"> Anadir nuevo curso</button>
+        <div class="popup-container" id="popupCursos">
           <div class="popup-content">
-            <h4>pre-matricula de <br /> nombre apellido apellido</h4>
+            <h4>Añadir nuevo curso</h4>
             <hr />
-            <ol>
-              <li>CCOM3001 - M25</li>
-              <li>CCOM3001 - M25</li>
-              <li>CCOM3001 - M25</li>
-              <li>CCOM3001 - M25</li>
-              <li>CCOM3001 - M25</li>
-            </ol>
-            <p>Total de creditos: 15</p>
-            <button class="pmbtn" onclick="goBack()">Atras</button>
-            <button class="pmbtn" onclick="goBack()">Confirmar</button>
+            <form>
+              <label for="curso">ID de Curso:</label>
+              <input type="text" placeholder="8 caracteres, ej: CCOM3001" id="curso" maxlength="8" />
+
+              <label for="secciones">Secciones:</label>
+              <input type="text" placeholder="M25, V40, L10" id="seccion" />
+
+              <label for="capacidad">Capacidad maxima:</label>
+              <input type="number" placeholder="0" id="capacidad" />
+
+      
+            </form>
+            <button class="pmbtn" onclick="goBackCurso()">Cancelar</button>
+            <button class="pmbtn">Guardar</button>
           </div>
         </div>
 
@@ -121,25 +125,25 @@
               <tr>
                 <td>Pepito, Pelon</td>
                 <td>840-19-8616</td>
-                <td><button class="pmbtn" onclick="showPopup()">/</button></td>
+                <td><button class="pmbtn" onclick="showPopupEst()">/</button></td>
 
               </tr>
               <tr>
                 <td>Pepito, Pelon</td>
                 <td>840-19-8616</td>
-                <td><button class="pmbtn" onclick="showPopup()">/</button></td>
+                <td><button class="pmbtn" onclick="showPopupEst()">/</button></td>
               </tr>
               <tr>
                 <td>Pepito, Pelon</td>
                 <td>840-19-8616</td>
-                <td><button class="pmbtn" onclick="showPopup()">/</button></td>
+                <td><button class="pmbtn" onclick="showPopupEst()">/</button></td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <div class="popup-container" id="popup">
+      <div class="popup-container" id="popupEstudiante">
         <div class="popup-content">
           <h4>pre-matricula de <br /> nombre apellido apellido</h4>
           <hr />
@@ -151,8 +155,9 @@
             <li>CCOM3001 - M25</li>
           </ol>
           <p>Total de creditos: 15</p>
-          <button class="pmbtn" onclick="goBack()">Atras</button>
-          <button class="pmbtn" onclick="goBack()">Confirmar</button>
+          <button class="pmbtn" onclick="goBackEst()">Atras</button>
+          <button class="pmbtn" onclick="goBackEst()">Editar</button>
+          <button class="pmbtn" onclick="goBackESt()">Confirmar</button>
         </div>
       </div>
     </div>
